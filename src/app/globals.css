@@ -1,0 +1,262 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Dark theme (default) ─── */
+:root {
+  color-scheme: dark;
+
+  --background: #0b1020;
+  --background-secondary: #080c18;
+  --background-elevated: #0d1428;
+  --foreground: #f7f7f2;
+  --foreground-muted: rgba(247, 247, 242, 0.7);
+  --foreground-subtle: rgba(247, 247, 242, 0.55);
+  --foreground-faint: rgba(247, 247, 242, 0.4);
+  --border: rgba(255, 255, 255, 0.08);
+  --glass-bg: rgba(255, 255, 255, 0.04);
+  --glass-bg-hover: rgba(255, 255, 255, 0.07);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --shadow-glow: 0 0 40px rgba(68, 96, 239, 0.25);
+  --shadow-glow-pink: 0 0 40px rgba(252, 49, 150, 0.2);
+  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.25);
+  --shadow-theme-sm: 0 2px 12px rgba(0, 0, 0, 0.2);
+  --navbar-bg: rgba(11, 16, 32, 0.82);
+  --mobile-menu-bg: rgba(11, 16, 32, 0.96);
+  --hero-base: #0b1020;
+  --hero-gradient-top: rgba(13, 20, 48, 0.8);
+  --hero-gradient-bottom: #080c18;
+  --mark-opacity: 0.1;
+  --mark-blend: soft-light;
+  --mark-glow-opacity: 0.5;
+  --orb-primary: rgba(68, 96, 239, 0.1);
+  --orb-pink: rgba(252, 49, 150, 0.08);
+  --mesh-gradient: radial-gradient(
+      ellipse 55% 45% at 75% 15%,
+      rgba(68, 96, 239, 0.12) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse 45% 40% at 15% 75%,
+      rgba(252, 49, 150, 0.08) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse 35% 30% at 50% 50%,
+      rgba(75, 201, 241, 0.05) 0%,
+      transparent 45%
+    );
+  --mesh-section: radial-gradient(at 40% 20%, rgba(68, 96, 239, 0.35) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, rgba(63, 55, 202, 0.3) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, rgba(75, 201, 241, 0.2) 0px, transparent 50%),
+    radial-gradient(at 80% 80%, rgba(252, 49, 150, 0.15) 0px, transparent 50%);
+  --pill-bg: rgba(255, 255, 255, 0.03);
+  --pill-border: rgba(255, 255, 255, 0.06);
+  --input-bg: rgba(255, 255, 255, 0.05);
+  --footer-mesh-opacity: 0.3;
+  --logo-filter: none;
+}
+
+/* ─── Light theme ─── */
+.light {
+  color-scheme: light;
+
+  --background: #f7f7f2;
+  --background-secondary: #efeee8;
+  --background-elevated: #ffffff;
+  --foreground: #111827;
+  --foreground-muted: #4b5563;
+  --foreground-subtle: #6b7280;
+  --foreground-faint: #9ca3af;
+  --border: rgba(17, 24, 39, 0.08);
+  --glass-bg: rgba(255, 255, 255, 0.75);
+  --glass-bg-hover: rgba(255, 255, 255, 0.92);
+  --glass-border: rgba(255, 255, 255, 0.95);
+  --shadow-glass: 0 4px 24px rgba(17, 24, 39, 0.06), 0 1px 3px rgba(17, 24, 39, 0.04);
+  --shadow-glow: 0 8px 32px rgba(68, 96, 239, 0.14);
+  --shadow-glow-pink: 0 8px 28px rgba(252, 49, 150, 0.1);
+  --shadow-card: 0 4px 24px rgba(17, 24, 39, 0.07), 0 1px 2px rgba(17, 24, 39, 0.04);
+  --shadow-theme-sm: 0 2px 8px rgba(17, 24, 39, 0.05);
+  --navbar-bg: rgba(247, 247, 242, 0.88);
+  --mobile-menu-bg: rgba(247, 247, 242, 0.98);
+  --hero-base: #f7f7f2;
+  --hero-gradient-top: rgba(68, 96, 239, 0.05);
+  --hero-gradient-bottom: #efeee8;
+  --mark-opacity: 0.08;
+  --mark-blend: multiply;
+  --mark-glow-opacity: 0.35;
+  --orb-primary: rgba(68, 96, 239, 0.07);
+  --orb-pink: rgba(252, 49, 150, 0.05);
+  --mesh-gradient: radial-gradient(
+      ellipse 55% 45% at 75% 15%,
+      rgba(68, 96, 239, 0.07) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse 45% 40% at 15% 75%,
+      rgba(252, 49, 150, 0.04) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse 35% 30% at 50% 50%,
+      rgba(75, 201, 241, 0.04) 0%,
+      transparent 45%
+    );
+  --mesh-section: radial-gradient(at 40% 20%, rgba(68, 96, 239, 0.08) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, rgba(63, 55, 202, 0.06) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, rgba(75, 201, 241, 0.05) 0px, transparent 50%),
+    radial-gradient(at 80% 80%, rgba(252, 49, 150, 0.04) 0px, transparent 50%);
+  --pill-bg: rgba(255, 255, 255, 0.85);
+  --pill-border: rgba(17, 24, 39, 0.06);
+  --input-bg: rgba(255, 255, 255, 0.95);
+  --footer-mesh-opacity: 0.5;
+  --logo-filter: none;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background font-cairo text-foreground antialiased;
+    transition: background-color 0.4s ease, color 0.3s ease;
+  }
+
+  ::selection {
+    background: rgba(68, 96, 239, 0.35);
+    color: var(--foreground);
+  }
+
+  .light ::selection {
+    background: rgba(68, 96, 239, 0.2);
+    color: #111827;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply rounded-2xl border shadow-glass backdrop-blur-xl;
+    background: var(--glass-bg);
+    border-color: var(--border);
+    transition: background 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+  }
+
+  .glass-card-hover {
+    @apply glass-card;
+    transition: all 0.3s ease;
+  }
+
+  .glass-card-hover:hover {
+    background: var(--glass-bg-hover);
+    border-color: rgba(68, 96, 239, 0.25);
+    box-shadow: var(--shadow-glow);
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-l from-brand-light via-brand-primary to-brand-pink bg-clip-text text-transparent;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-l from-brand-primary to-brand-purple px-6 py-3 text-sm font-semibold text-white shadow-glow transition-all duration-300 hover:scale-[1.02] hover:brightness-110 active:scale-[0.98];
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border px-6 py-3 text-sm font-semibold backdrop-blur-sm transition-all duration-300 active:scale-[0.98];
+    border-color: var(--border);
+    background: var(--glass-bg);
+    color: var(--foreground);
+  }
+
+  .btn-secondary:hover {
+    background: var(--glass-bg-hover);
+    border-color: rgba(75, 201, 241, 0.35);
+  }
+
+  .section-padding {
+    @apply px-4 py-20 sm:px-6 lg:px-8 lg:py-28;
+  }
+
+  .mesh-bg {
+    background-image: var(--mesh-section);
+  }
+
+  .hero-mesh {
+    background-image: var(--mesh-gradient);
+  }
+
+  .theme-pill {
+    background: var(--pill-bg);
+    border: 1px solid var(--pill-border);
+  }
+
+  .bg-elevated {
+    background: var(--background-elevated);
+  }
+
+  .text-theme-muted {
+    color: var(--foreground-muted);
+  }
+
+  .text-theme-subtle {
+    color: var(--foreground-subtle);
+  }
+
+  .text-theme-faint {
+    color: var(--foreground-faint);
+  }
+
+  .border-theme {
+    border-color: var(--border);
+  }
+
+  .bg-glass {
+    background: var(--glass-bg);
+  }
+
+  .bg-mockup {
+    background: #0d1428;
+  }
+
+  .navbar-scrolled {
+    background: var(--navbar-bg);
+    border-color: var(--border);
+  }
+
+  .mobile-menu-bg {
+    background: var(--mobile-menu-bg);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .hero-btn-primary {
+    @apply inline-flex items-center justify-center gap-2.5 rounded-2xl bg-gradient-to-l from-brand-primary to-brand-purple px-7 py-3.5 text-sm font-semibold text-white shadow-glow backdrop-blur-sm transition-all duration-300 hover:brightness-110 active:scale-[0.98];
+  }
+
+  .light .hero-btn-primary {
+    @apply hover:shadow-[0_8px_32px_rgba(68,96,239,0.22)];
+  }
+
+  .hero-btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl border px-7 py-3.5 text-sm font-semibold backdrop-blur-md transition-all duration-300 active:scale-[0.98];
+    border-color: var(--border);
+    background: var(--glass-bg);
+    color: var(--foreground);
+  }
+
+  .hero-btn-secondary:hover {
+    background: var(--glass-bg-hover);
+    border-color: rgba(68, 96, 239, 0.2);
+    box-shadow: var(--shadow-theme-sm);
+  }
+
+  .mark-blend {
+    opacity: var(--mark-opacity);
+    mix-blend-mode: var(--mark-blend);
+  }
+}
